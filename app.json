@@ -11,12 +11,12 @@
        "description": "Vmess协议默认UUID，请输入自己的UUID",
        "value": "8fd6dadc-0d59-4ae7-93bb-e6b8a231c2c2"
      },
-    "V2RAY_RAY_BUFFER_SIZE": {
-       "description": "每个连接的缓存大小，单位MB",
-       "value": "10"
+    "PORT": {
+       "description": "监听的端口号，可不用修改",
+       "value": "10000"
      }
   },
-  "website": "https://github.com/wangyi2005/v2ray-heroku",
-  "repository": "https://github.com/wangyi2005/v2ray-heroku",
+  "website": "https://github.com/LiteCoder/v2ray-heroku",
+  "repository": "https://github.com/LiteCoder/v2ray-heroku",
   "stack": "container"
- }
+}
