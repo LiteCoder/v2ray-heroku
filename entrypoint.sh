@@ -1,7 +1,7 @@
 cd /v2raybin
 
 if [ "$VER" = "latest" ]; then
-  V_VER=`wget -qO- "https://api.github.com/repos/v2ray/v2ray-core/releases/latest" | grep 'tag_name' | cut -d\" -f4`
+  V_VER=`wget -qO- -t1 -T2 "https://api.github.com/repos/v2ray/v2ray-core/releases/latest" | grep 'tag_name' | head -n 1 | cut -d\" -f4`
 else
   V_VER="v$VER"
 fi
