@@ -1,12 +1,12 @@
 cd /v2raybin
 
 if [ "$VER" = "latest" ]; then
-  V_VER=`wget -qO- -t1 -T2 "https://api.github.com/repos/v2ray/v2ray-core/releases/latest" | grep 'tag_name' | head -n 1 | cut -d\" -f4`
+  URL="https://github.com/v2ray/v2ray-core/releases/latest/download/v2ray-linux-64.zip"
 else
-  V_VER="v$VER"
+  URL="https://github.com/v2ray/v2ray-core/releases/download/v$VER/v2ray-linux-64.zip"
 fi
 
-wget -O v2ray.zip http://github.com/v2ray/v2ray-core/releases/download/$V_VER/v2ray-linux-64.zip
+wget -O v2ray.zip $URL
 unzip v2ray.zip 
 
 chmod +x v2ray
